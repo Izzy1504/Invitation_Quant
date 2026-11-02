@@ -354,14 +354,10 @@ export default function InvitationExperience() {
                 <span className="date-day">{graduation.date.day}</span>
                 <span className="date-divider" />
                 <span className="date-month">THÁNG<br />{graduation.date.month}</span>
-                <span className="date-year">
-                  {graduation.year}
-                  {graduation.yearConfirmed ? "" : " · CẦN XÁC NHẬN"}
-                </span>
+                <span className="date-year">{graduation.year}</span>
               </div>
-              <p className="date-confirmation">Ngày và năm tổ chức cần được xác nhận trước khi gửi thiệp.</p>
               <div className="card-schedule">
-                <div><span>ĐÓN KHÁCH</span><strong>{graduation.checkIn.start} — {graduation.checkIn.end}</strong></div>
+                <div><span>CHECK-IN</span><strong>{graduation.checkIn.start} — {graduation.checkIn.end}</strong></div>
                 <div><span>BUỔI LỄ</span><strong>{graduation.ceremony.start} — {graduation.ceremony.end}</strong></div>
               </div>
               {[graduation.checkInRoom, graduation.graduateSeat, graduation.parentSeat, graduation.contactGroup].some(Boolean) && <dl className="details-list">

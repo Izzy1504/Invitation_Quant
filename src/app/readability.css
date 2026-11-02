@@ -46,7 +46,6 @@ select:focus-visible, .floor-map-hotspot:focus-visible { outline: 3px solid #a36
 .card-small { font-size: 11px; }
 .date-month { font-size: 14px; }
 .date-year { font-size: 12px; }
-.date-confirmation { font-size: 14px; line-height: 1.8; }
 .date-display { flex-wrap: wrap; }
 .card-schedule span { font-size: 12px; }
 .card-schedule strong { font-size: 20px; line-height: 1.6; }
@@ -186,7 +185,6 @@ select:focus-visible, .floor-map-hotspot:focus-visible { outline: 3px solid #a36
   .card-small { font-size: 10px; }
   .date-year { max-width: none; font-size: 12px; }
   .date-month { font-size: 14px; }
-  .date-confirmation { font-size: 14px; }
   .detail-row { flex-direction: column; gap: 4px; font-size: 15px; }
   .detail-row dd { text-align: left; }
   .details-footnote { max-width: calc(100% - 48px); font-size: 12px; letter-spacing: .06em; }

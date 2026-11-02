@@ -9,7 +9,6 @@ export const graduation = {
     label: "08 tháng 11",
   },
   year: 2026,
-  yearConfirmed: false,
   session: "Ca 3",
   checkIn: { start: "13:00", end: "13:50" },
   ceremony: { start: "14:00", end: "16:30" },

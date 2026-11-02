@@ -659,12 +659,6 @@ a:focus-visible {
   letter-spacing: 0.1em;
 }
 
-.date-confirmation {
-  margin: 11px 0 0;
-  color: #a1787a;
-  font-size: 9px;
-}
-
 .card-schedule {
   display: grid;
   grid-template-columns: 1fr 1fr;

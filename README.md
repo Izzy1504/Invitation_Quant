@@ -42,7 +42,7 @@ The **Tắt tiếng / Bật tiếng** button controls the audio element's muted 
 
 An After credits section at the end of the invitation identifies the track, composer Joe Hisaishi, film Kiki's Delivery Service (Studio Ghibli), and the organizer's reference YouTube video. Attribution does not grant permission to redistribute the recording; permission remains the organizer's responsibility.
 
-Missing ceremony detail rows (room, graduate/parent seats and contact group) and the missing check-in location are omitted rather than displayed as pending placeholders. The separate date/year confirmation notice remains because those values have not been confirmed.
+Missing ceremony detail rows (room, graduate/parent seats and contact group) and the missing check-in location are omitted rather than displayed as pending placeholders. The organizer has confirmed the ceremony date and times, so no date/year confirmation notice is displayed.
 
 The envelope click also plays the user-linked [“Tuturu” sound from Myinstants](https://www.myinstants.com/en/instant/tuturu/) once at 55% volume. Its source is the page's published `og:audio` URL, requested directly by an HTML audio element with `preload="none"`; no recording is copied into the project. Skip/Escape do not play this effect. Playback failure is logged and shown as a non-blocking notice; it never blocks the letter transition. The source credit appears in the opening. This external audio request exposes the guest's connection to Myinstants, and availability/usage rights remain subject to the source; confirm permission before public distribution.
 
@@ -93,7 +93,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Before sharing or publishing
 
-The supplied plan marks some ceremony details as unconfirmed. Verify the year, date, check-in room, graduate seat, parent area, and contact group with the official organizer before publishing. Until then, the site labels the year as needing confirmation and renders missing fields as “Đang cập nhật”; it intentionally has no countdown.
+The ceremony date and times are confirmed. The check-in room, graduate seat, parent area, and contact group remain unspecified; verify these with the official organizer before adding them. Missing details are omitted, and the site intentionally has no countdown.
 
 The floor-G map was supplied later as a 1230 × 668 PNG. Its unmodified copy is `public/campus-floor-g.png`. `src/data/campus-map.ts` contains hotspot outlines and fantasy label anchors in the same source-image coordinate system. `src/components/fantasy-campus-art.tsx` redraws the campus as original vector art. `src/components/anime-campus-map.tsx` offers both fantasy and source-image views with shared overlays, maintaining alignment at every zoom level. This preserves the source's numbered rooms, parking area, 7-Eleven label, labs, library, pond, medical room, entrance, and exit. It is not a survey or a newly verified official plan; no unconfirmed check-in location, seat, or route is inferred from it.
 
