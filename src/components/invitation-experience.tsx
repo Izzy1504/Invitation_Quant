@@ -134,10 +134,11 @@ function OpeningLetter({ onOpen, onEnter, reducedMotion, fullMotion, systemReduc
 }
 
 function DetailRow({ label, value }: { label: string; value: string | null }) {
+  if (!value) return null;
   return (
     <div className="detail-row">
       <dt>{label}</dt>
-      <dd>{value ?? <span className="pending-value">Đang cập nhật</span>}</dd>
+      <dd>{value}</dd>
     </div>
   );
 }
@@ -191,6 +192,7 @@ export default function InvitationExperience() {
   }, []);
 
   function startEntrance() {
+    window.dispatchEvent(new Event("invitation-play-soundtrack"));
     setEntering(true);
     setMusicRequested(true);
     const audio = letterSound.current;
@@ -204,6 +206,7 @@ export default function InvitationExperience() {
   }
 
   function enterWorld() {
+    window.dispatchEvent(new Event("invitation-play-soundtrack"));
     setMusicRequested(true);
     setEntering(false);
     setShowOpening(false);
@@ -361,16 +364,15 @@ export default function InvitationExperience() {
                 <div><span>ĐÓN KHÁCH</span><strong>{graduation.checkIn.start} — {graduation.checkIn.end}</strong></div>
                 <div><span>BUỔI LỄ</span><strong>{graduation.ceremony.start} — {graduation.ceremony.end}</strong></div>
               </div>
-              <dl className="details-list">
+              {[graduation.checkInRoom, graduation.graduateSeat, graduation.parentSeat, graduation.contactGroup].some(Boolean) && <dl className="details-list">
                 <DetailRow label="Phòng check-in" value={graduation.checkInRoom} />
                 <DetailRow label="Chỗ ngồi tân khoa" value={graduation.graduateSeat} />
                 <DetailRow label="Khu vực phụ huynh" value={graduation.parentSeat} />
                 <DetailRow label="Nhóm liên hệ" value={graduation.contactGroup} />
-              </dl>
+              </dl>}
               <p className="card-footer">Mong được đón bạn trong ngày vui này <span>♡</span></p>
             </div>
           </div>
-          <p className="details-footnote">THÔNG TIN ĐỊA ĐIỂM SẼ ĐƯỢC BỔ SUNG KHI CÓ XÁC NHẬN CHÍNH THỨC</p>
           <RsvpForm />
         </section>
 
@@ -380,7 +382,7 @@ export default function InvitationExperience() {
               <span className="eyebrow"><CinematicJapanese active={!showOpening}>学園案内</CinematicJapanese> · SƠ ĐỒ KHUÔN VIÊN</span>
               <h2>Một điểm hẹn,<br /><em>ngàn cảm xúc.</em></h2>
             </div>
-            <p>Trường Đại học FPT<br />Khu vực check-in: <span>Đang cập nhật</span></p>
+            <p>Trường Đại học FPT{graduation.checkInRoom && <><br />Khu vực check-in: <span>{graduation.checkInRoom}</span></>}</p>
           </div>
           <AnimeCampusMap />
         </section>

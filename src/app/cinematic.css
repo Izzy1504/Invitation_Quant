@@ -112,6 +112,7 @@
 .opening--leaving .envelope-paper { transform: translateY(-62px); }
 
 .soundtrack-inline { width: min(100%, 360px); padding: 16px; border: 1px solid #f1dac54d; border-radius: 5px; background: #101b32b8; color: #eee1e4; }
+.soundtrack-error { position: fixed; z-index: 120; top: max(154px, calc(env(safe-area-inset-top) + 54px)); right: 16px; width: min(280px, calc(100vw - 32px)); padding: 12px; border: 1px solid #c8b49a; border-radius: 12px; background: #17233df5; color: #fff0df; font: 13px var(--sans); }
 .soundtrack-inline .soundtrack-title { margin: 0; color: #fff0dc; font-size: 14px; }
 .soundtrack-inline .soundtrack-subtitle { color: #dfcadb; font-size: 11px; }
 .soundtrack-inline-host { margin-top: 12px; }

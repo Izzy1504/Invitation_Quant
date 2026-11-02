@@ -39,7 +39,6 @@ export default function AnimeCampusMap() {
           }} aria-label="Đặt lại bản đồ">↺</button>
         </div>
       </div>
-      <p className="map-safety-label">Theo hình bạn cung cấp · Phòng check-in và chỗ ngồi chưa được xác nhận.</p>
       <div className="map-view-switch" role="group" aria-label="Kiểu bản đồ">
         <button type="button" aria-pressed={!original} onClick={() => setOriginal(false)}>Bản đồ fantasy</button>
         <button type="button" aria-pressed={original} onClick={() => setOriginal(true)}>Đối chiếu ảnh gốc</button>
