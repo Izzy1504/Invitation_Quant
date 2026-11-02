@@ -1,0 +1,20 @@
+export const graduation = {
+  university: "FPT University",
+  graduateName: "Trần Viết Quang",
+  studentId: "SE173480",
+  className: "Class of 2026",
+  date: {
+    day: "08",
+    month: "11",
+    label: "08 tháng 11",
+  },
+  year: 2026,
+  yearConfirmed: false,
+  session: "Ca 3",
+  checkIn: { start: "13:00", end: "13:50" },
+  ceremony: { start: "14:00", end: "16:30" },
+  checkInRoom: null,
+  graduateSeat: null,
+  parentSeat: null,
+  contactGroup: null,
+} as const;

@@ -1,0 +1,4 @@
+project_id = "Invitation_Quant"
+
+[functions.rsvp]
+verify_jwt = false

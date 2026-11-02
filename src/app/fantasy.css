@@ -1,0 +1,162 @@
+:root {
+  --jp-serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "MS Mincho", serif;
+}
+
+.hero {
+  min-height: max(900px, 100svh);
+  background: linear-gradient(180deg, #9dc9e7, #d7e6f4 60%, #edc9d6);
+  padding-top: 145px;
+}
+
+.fantasy-art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: calc(100% + 70px);
+}
+
+.hero-haze {
+  background: linear-gradient(90deg, rgb(234 243 247 / 96%), rgb(234 243 247 / 89%) 23%, rgb(234 243 247 / 30%) 49%, transparent 70%),
+    linear-gradient(0deg, #fffaf3 0%, transparent 16%);
+}
+
+.hero-content {
+  width: min(660px, 57%);
+  animation: none;
+}
+
+.hero h1 {
+  margin-top: 16px;
+  font-size: clamp(56px, 6vw, 88px);
+}
+
+.hero-japanese-title {
+  display: block;
+  margin-top: 26px;
+  color: #48677c;
+  font-family: var(--jp-serif);
+  font-size: clamp(17px, 2vw, 26px);
+  letter-spacing: .22em;
+}
+
+.hero-vertical-jp {
+  position: absolute;
+  top: 21%;
+  right: 6.5%;
+  color: #fff9f3;
+  font-family: var(--jp-serif);
+  font-size: 15px;
+  letter-spacing: .25em;
+  text-shadow: 0 2px 8px #477496;
+  writing-mode: vertical-rl;
+  pointer-events: none;
+}
+
+.hero-intro { max-width: 380px; line-height: 1.6; }
+.hero-graduate { margin-top: 28px; }
+.hero-content > .button { margin-top: 28px; }
+.hero-meta { color: #3e617b; }
+.anime-scene-tag { background: rgb(255 254 250 / 65%); }
+.chapter-japanese { font-family: var(--jp-serif); font-size: 10px; }
+.chapter-number { display: none; }
+
+.floating-island {
+  animation: island-levitate 7s ease-in-out infinite alternate;
+}
+
+.island-distant { animation-duration: 10s; animation-delay: -3s; opacity: .8; }
+.island-waterfall { animation: waterfall-flow 2.4s linear infinite; }
+.fantasy-halo { animation: magic-halo-glow 6s ease-in-out infinite alternate; }
+.fantasy-stardust { animation: magic-halo-glow 4s ease-in-out infinite alternate; }
+.fantasy-distant-clouds { animation: sky-drift 32s ease-in-out infinite alternate; }
+.fantasy-near-clouds { animation: sky-drift 23s ease-in-out infinite alternate-reverse; }
+.graduate-ribbon { transform-box: fill-box; transform-origin: 0 70%; animation: ribbon-wave 4s ease-in-out infinite alternate; }
+.graduate-gown { transform-box: fill-box; transform-origin: 50% 0; animation: ribbon-wave 6s ease-in-out infinite alternate; }
+.island-crystals { animation: crystal-shimmer 5s ease-in-out infinite alternate; }
+
+.opening {
+  background: radial-gradient(ellipse at 70% 20%, #cae5f7, transparent 70%), linear-gradient(135deg, #edf2f7, #fff3ef 60%, #edcfe1);
+}
+
+.opening-japanese {
+  display: block;
+  margin-bottom: 25px;
+  color: #617c98;
+  font-family: var(--jp-serif);
+  font-size: clamp(17px, 4vw, 24px);
+  letter-spacing: .2em;
+}
+
+.opening--leaving .envelope-flap { transform: none; }
+.envelope-flap { transition: none; }
+.section-japanese {
+  display: block;
+  margin-top: 19px;
+  color: #b68296;
+  font-family: var(--jp-serif);
+  font-size: 19px;
+  letter-spacing: .16em;
+}
+
+.story-copy h2 { margin-top: 11px; }
+.story-stamp { gap: 7px; }
+.story-stamp span[lang="ja"] { font-family: var(--jp-serif); font-size: 11px; letter-spacing: .1em; }
+.story-stamp span:last-child { font-size: 6px; }
+.eyebrow [lang="ja"] { font-family: var(--jp-serif); font-size: 12px; font-weight: 400; }
+.closing-japanese {
+  display: block;
+  margin-bottom: 18px;
+  color: #925e77;
+  font-family: var(--jp-serif);
+  font-size: 29px;
+  letter-spacing: .25em;
+}
+
+.closing-art .campus-art { opacity: .15; mix-blend-mode: multiply; }
+.anime-map-viewport { background: linear-gradient(180deg, #dcecf4, #f3e9ee 90%); }
+.anime-map-canvas { background: radial-gradient(ellipse at 50% 75%, rgb(204 217 238 / 65%), transparent 70%); }
+.map-art-caption { color: #657f98; font-size: 12px; }
+
+@keyframes island-levitate { from { transform: translateY(0); } to { transform: translateY(-13px); } }
+@keyframes waterfall-flow { to { stroke-dashoffset: -52; } }
+@keyframes magic-halo-glow { from { opacity: .4; } to { opacity: .95; } }
+@keyframes ribbon-wave { from { transform: rotate(-3deg); } to { transform: rotate(4deg); } }
+@keyframes crystal-shimmer { from { opacity: .4; } to { opacity: .95; } }
+
+@media (max-width: 900px) {
+  .hero-content { width: 75%; }
+  .hero-haze { background: linear-gradient(90deg, rgb(234 243 247 / 92%), rgb(234 243 247 / 70%) 38%, transparent 100%), linear-gradient(0deg, #fffaf3, transparent 18%); }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    min-height: max(940px, 100svh);
+    padding-top: 112px;
+    padding-bottom: 160px;
+  }
+  .hero-content { width: 100%; }
+  .hero h1 { font-size: clamp(54px, 15vw, 76px); }
+  .hero-japanese-title { font-size: 19px; margin-top: 23px; letter-spacing: .14em; }
+  .hero-vertical-jp { top: 15%; right: 15px; font-size: 11px; color: #4b6c8c; text-shadow: none; }
+  .fantasy-art { top: auto; bottom: 0; width: 230%; max-width: none; left: -100%; height: auto; aspect-ratio: 1.6; }
+  .hero-haze { background: linear-gradient(180deg, rgb(231 243 252 / 89%) 0%, rgb(235 244 249 / 84%) 27%, rgb(238 244 247 / 53%) 65%, transparent 90%), linear-gradient(0deg, #fffaf3, transparent 15%); }
+  .hero .hero-intro { max-width: 285px; font-size: 15px; }
+  .hero-graduate { margin-top: 23px; }
+  .hero-content > .button { margin-top: 23px; }
+  .hero-meta, .scroll-cue { bottom: 88px; }
+  .chapter-japanese { font-size: 10px; }
+  .chapter-navigation a { min-height: 46px; }
+  .opening-japanese { margin-bottom: 22px; font-size: 18px; }
+  .section-japanese { font-size: 17px; }
+  .map-art-caption { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-full-motion="true"]) {
+  .fantasy-art { transform: none !important; }
+  .floating-island, .island-waterfall, .fantasy-halo, .fantasy-stardust,
+  .fantasy-distant-clouds, .fantasy-near-clouds, .graduate-ribbon, .graduate-gown,
+  .island-crystals { animation: none; }
+  }
+}

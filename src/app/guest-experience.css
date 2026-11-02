@@ -1,0 +1,60 @@
+.soundtrack-floating {
+  position: fixed;
+  z-index: 110;
+  top: max(90px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  width: min(360px, calc(100vw - 32px));
+  max-height: calc(100dvh - 190px - env(safe-area-inset-bottom));
+  overflow: auto;
+  margin: 0;
+  box-shadow: 0 15px 50px #19344a40;
+}
+.soundtrack-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: #354e70; font-size: 15px; }
+.soundtrack-panel-heading button { flex-shrink: 0; width: 44px; height: 44px; border: 1px solid #c6b99b; border-radius: 50%; background: #f9f4e7; color: #354e70; font-size: 26px; cursor: pointer; }
+.soundtrack-floating iframe { min-width: 200px; }
+.map-view-switch { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 14px; }
+.map-view-switch button { min-height: 44px; padding: 10px 16px; border: 1px solid #b8ac8b; border-radius: 4px; background: #faf6ea; color: #354e70; cursor: pointer; }
+.map-view-switch button[aria-pressed="true"] { background: #354e70; color: #f6e8c8; }
+.fantasy-map-art { background: #19364a; }
+.fantasy-map-building { fill: #e6d5b0; stroke: #f5e9c9; stroke-width: 2; filter: url(#atlas-shadow); }
+.fantasy-room { fill: #f2e7cb; stroke: #b6a57b; stroke-width: 2; }
+.fantasy-building-pond { fill: url(#atlas-water); stroke: #eee2b8; stroke-width: 5; filter: none; }
+.fantasy-building-library { fill: #d3b88f; }
+.fantasy-building-innovation, .fantasy-building-digital, .fantasy-building-ohm { fill: #acc9c2; }
+.fantasy-building-parking { fill: #9faf88; filter: none; }
+.fantasy-building-shop { fill: #8db4a0; }
+.fantasy-building-exit, .fantasy-building-entrance { fill: #496e65; filter: none; }
+.fantasy-map-label { fill: #293d45; font-family: var(--sans); font-size: 14px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
+.fantasy-room-label { font-size: 18px; font-weight: 500; }
+.fantasy-label-library { font-family: var(--serif); font-size: 21px; }
+.fantasy-label-pond { font-family: var(--serif); font-size: 21px; }
+.fantasy-label-entrance, .fantasy-label-exit { fill: #ffefd0; font-size: 12px; }
+.fantasy-label-medical { font-size: 13px; }
+.fantasy-label-shop { font-size: 13px; }
+.fantasy-atlas-title { fill: #334f53; font-family: var(--serif); font-size: 36px; text-anchor: middle; letter-spacing: 4px; }
+.fantasy-atlas-subtitle { fill: #3c5b5b; font-family: var(--sans); font-size: 12px; text-anchor: middle; letter-spacing: 2px; }
+.fantasy-map-art .floor-map-hotspot.is-selected > path { fill: #f3e5a84d; stroke: #4a3f78; stroke-width: 3; }
+.fantasy-map-art .floor-map-hotspot:hover > path { fill: #fff3cc66; stroke: #5a487e; }
+.rsvp-card { width: min(760px, calc(100% - 40px)); margin: 60px auto 0; padding: clamp(22px, 5vw, 44px); border: 1px solid #cbbb99; border-radius: 8px; background: #fffdf6; color: #354e70; scroll-margin-top: 100px; }
+.rsvp-card h3 { margin: 16px 0; font-family: var(--serif); font-size: clamp(30px, 5vw, 42px); }
+.rsvp-card > p { font-size: 16px; line-height: 1.8; }
+.rsvp-card fieldset { display: grid; gap: 12px; min-width: 0; margin: 24px 0 0; padding: 0; border: 0; }
+.rsvp-card fieldset > label { margin-top: 10px; font-weight: 600; }
+.rsvp-card label span { font-size: 14px; font-weight: 400; }
+.rsvp-card input:not([type="checkbox"]), .rsvp-card select, .rsvp-card textarea { width: 100%; min-width: 0; min-height: 48px; padding: 12px; border: 1px solid #aeb6b4; border-radius: 4px; background: #fff; color: #293d45; font: inherit; }
+.rsvp-card textarea { resize: vertical; }
+.rsvp-card .rsvp-consent { display: flex; align-items: flex-start; gap: 12px; line-height: 1.8; }
+.rsvp-consent input { flex-shrink: 0; width: 20px; height: 20px; margin-top: 4px; accent-color: #354e70; }
+.rsvp-privacy { margin: 4px 0 12px; font-size: 13px; line-height: 1.8; color: #51666b; }
+.rsvp-card button { justify-self: start; cursor: pointer; }
+.rsvp-card :disabled { opacity: .65; cursor: wait; }
+.rsvp-feedback { margin-top: 20px; border-left: 3px solid #9a6b8a; padding: 12px; background: #f4edf1; overflow-wrap: anywhere; }
+.rsvp-card :focus-visible, .soundtrack-floating :focus-visible, .map-view-switch :focus-visible { outline: 3px solid #9a6b8a; outline-offset: 3px; }
+
+@media (max-width: 620px) {
+  .soundtrack-floating { top: max(86px, env(safe-area-inset-top)); }
+  .rsvp-card { width: calc(100% - 32px); }
+}
+@media (max-height: 600px) and (min-width: 621px) {
+  .soundtrack-floating { top: 12px; right: 12px; max-height: calc(100dvh - 24px); }
+}
