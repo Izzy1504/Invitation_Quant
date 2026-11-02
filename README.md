@@ -40,6 +40,8 @@ The YouTube player has been removed at the organizer's request. The supplied rec
 
 The **Tắt tiếng / Bật tiếng** button controls the audio element's muted property. Browser autoplay blocks and media errors are logged and expose a compact **Phát nhạc** retry notice, without recreating a music card. Replay pauses the old audio element before a new opening. Screen-lock/app-background playback remains browser-dependent; visual pause and audio controls are independent.
 
+An After credits section at the end of the invitation identifies the track, composer Joe Hisaishi, film Kiki's Delivery Service (Studio Ghibli), and the organizer's reference YouTube video. Attribution does not grant permission to redistribute the recording; permission remains the organizer's responsibility.
+
 Missing ceremony detail rows (room, graduate/parent seats and contact group) and the missing check-in location are omitted rather than displayed as pending placeholders. The separate date/year confirmation notice remains because those values have not been confirmed.
 
 The envelope click also plays the user-linked [“Tuturu” sound from Myinstants](https://www.myinstants.com/en/instant/tuturu/) once at 55% volume. Its source is the page's published `og:audio` URL, requested directly by an HTML audio element with `preload="none"`; no recording is copied into the project. Skip/Escape do not play this effect. Playback failure is logged and shown as a non-blocking notice; it never blocks the letter transition. The source credit appears in the opening. This external audio request exposes the guest's connection to Myinstants, and availability/usage rights remain subject to the source; confirm permission before public distribution.

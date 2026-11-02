@@ -408,6 +408,13 @@ export default function InvitationExperience() {
         </section>
       </main>
 
+      <section className="music-credits" aria-label="Ghi nhận âm nhạc">
+        <h2>After credits · Âm nhạc</h2>
+        <p><cite>A Town With An Ocean View (Umi no Mieru Machi)</cite></p>
+        <p>Nhà soạn nhạc: Joe Hisaishi · Nhạc phim <cite>Kiki&apos;s Delivery Service</cite> (Studio Ghibli).</p>
+        <a href="https://www.youtube.com/watch?v=pGsZdaGu654" target="_blank" rel="noopener noreferrer">Video nguồn tham khảo trên YouTube ↗</a>
+        <p>Quyền tác giả và quyền đối với bản thu thuộc các chủ sở hữu tương ứng. Thiệp không đại diện cho hoặc được bảo trợ bởi các chủ sở hữu.</p>
+      </section>
       <footer className="site-footer">
         <a className="wordmark" href="#home"><span className="wordmark-icon"><FlowerMark /></span><span>Izzy<span className="wordmark-dot">.</span></span></a>
         <span>Được viết bằng sự biết ơn · 2026</span>
